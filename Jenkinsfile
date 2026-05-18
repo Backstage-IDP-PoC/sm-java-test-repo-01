@@ -12,8 +12,8 @@ pipeline {
         IMAGE_TAG = "${DOCKER_IMAGE}:${DOCKER_TAG}"
         GITOPS_REPO = "https://github.com/Backstage-IDP-PoC/k8s-manifest.git"
         APP_PORTS = "8080"
-        DEPLOY_ENV = "dev"       
-        DEPLOY_NAMESPACE = "dev"
+        DEPLOY_ENV = "qa"       
+        DEPLOY_NAMESPACE = "qa"
     }
 
     stages {
