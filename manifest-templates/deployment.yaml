@@ -2,11 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ${APP_NAME}
-  namespace: ${NAMESPACE}
   labels:
-    app: ${APP_NAME}
     backstage.io/kubernetes-id: ${APP_NAME}
-    environment: ${NAMESPACE}
 spec:
   replicas: 1
   selector:
@@ -17,13 +14,10 @@ spec:
       labels:
         app: ${APP_NAME}
         backstage.io/kubernetes-id: ${APP_NAME}
-        environment: ${NAMESPACE}
     spec:
       containers:
         - name: ${APP_NAME}
           image: ${DOCKER_IMAGE}
+          imagePullPolicy: Always
           ports:
-            - containerPort: ${APP_PORT}
-          env:
-            - name: APP_ENV
-              value: "${NAMESPACE}"
+            - containerPort: ${APP_PORTS}
