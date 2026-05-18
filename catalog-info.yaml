@@ -9,7 +9,7 @@ metadata:
     github.com/project-slug: Backstage-IDP-PoC/sm-java-test-repo-01
     backstage.io/techdocs-ref: dir:.
     jenkins.io/job-full-name: Backstage_PoC/sm-java-test-repo-01/main
-    argocd/app-name: sm-java-test-repo-01-qa
+    argocd/app-name: sm-java-test-repo-01-prod
     backstage.io/kubernetes-id: sm-java-test-repo-01
     sonarqube.org/project-key: sm-java-test-repo-01
 
