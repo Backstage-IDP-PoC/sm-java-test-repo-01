@@ -113,7 +113,7 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: 'github-tokens', variable: 'GITHUB_TOKEN')]) {
                     sh '''
-                    rm -rf k8s-manifests
+                    rm -rf k8s-manifest
 
                     git clone --depth 1 https://${GITHUB_TOKEN}@github.com/Backstage-IDP-PoC/k8s-manifest.git
                     cd k8s-manifest
